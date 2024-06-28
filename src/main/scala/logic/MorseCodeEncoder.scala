@@ -11,7 +11,7 @@ class MorseCodeEncoder {
   def characterToMorseCode(c: Char): String = {
     // find character in data set
     // finds the morse code of the character in data set
-    MorseCode.getCharacter(c).getOrElse(throw new Exception("Invalid character entered"))
+    MorseCode.getCharacter(c).getOrElse(throw new Exception(s"Invalid character entered: $c"))
   }
 
   // method to convert string to morse code

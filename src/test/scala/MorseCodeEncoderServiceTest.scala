@@ -12,7 +12,6 @@ class MorseCodeEncoderServiceTest extends AnyFunSpec with BeforeAndAfter {
   before {
     mockMorseCodeEncoder = mock[MorseCodeEncoder]
     morseCodeEncoderService = new MorseCodeEncoderService(mockMorseCodeEncoder)
-
   }
 
   describe("MorseCodeEncoderService") {
@@ -28,6 +27,7 @@ class MorseCodeEncoderServiceTest extends AnyFunSpec with BeforeAndAfter {
       assert(result == "Input: A, Translation: .-")
     }
   }
+
   it("should handle invalid char") {
     // Define mock behavior (e.g., throwing exception)
     when(mockMorseCodeEncoder.characterToMorseCode('*')).thenThrow(new Exception("Invalid character entered: *"))

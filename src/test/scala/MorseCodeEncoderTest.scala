@@ -46,7 +46,6 @@ class MorseCodeEncoderTest extends AnyFunSpec with BeforeAndAfter{
       val exception = intercept[Exception] {
         morseCodeEncoder.stringToMorseCode(input)
       }
-
       assert(exception.getMessage == "Invalid character entered : @")
     }
 
